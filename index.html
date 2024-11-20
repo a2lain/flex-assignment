@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
    <title>Ptours</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
    <style>
        * {
@@ -11,9 +12,14 @@
            font-family: 'Roboto', sans-serif;
        }
 
+       img {
+           max-width: 100%;
+           height: auto;
+       }
+
        header {
            background-color: #1F2937;
-           padding: 20px 200px;
+           padding: 20px 5%;
            color: #F9FAF8;
        }
 
@@ -68,15 +74,13 @@
 
        .hero-image {
            flex: 1;
-           height: 250px;
            display: flex;
            align-items: center;
            justify-content: center;
-           color: #fff;
        }
 
        .information {
-           padding: 80px 200px;
+           padding: 80px 5%;
            text-align: center;
        }
 
@@ -100,6 +104,7 @@
        .card-image {
            border-radius: 10px;
            margin-bottom: 10px;
+           overflow: hidden;
        }
 
        .card p {
@@ -109,7 +114,7 @@
 
        .quote-section {
            background-color: #E5E7EB;
-           padding: 100px 300px;
+           padding: 100px 5%;
        }
 
        .quote {
@@ -127,7 +132,7 @@
        }
 
        .cta-section {
-           padding: 100px 200px;
+           padding: 100px 5%;
        }
 
        .cta-container {
@@ -166,6 +171,87 @@
            text-align: center;
            padding: 40px;
        }
+
+       /* Media Queries */
+       @media screen and (max-width: 1024px) {
+           .hero {
+               padding-bottom: 50px;
+           }
+
+           .cards {
+               gap: 20px;
+           }
+       }
+
+       @media screen and (max-width: 768px) {
+           .hero {
+               flex-direction: column;
+               text-align: center;
+           }
+
+           .hero-content {
+               padding-right: 0;
+               margin-bottom: 30px;
+           }
+
+           .hero h1 {
+               font-size: 36px;
+           }
+
+           .cards {
+               flex-wrap: wrap;
+               justify-content: center;
+           }
+
+           .card {
+               flex-basis: calc(50% - 20px);
+           }
+
+           .quote {
+               font-size: 24px;
+           }
+
+           .quote-author {
+               font-size: 18px;
+           }
+       }
+
+       @media screen and (max-width: 480px) {
+           .nav {
+               flex-direction: column;
+               gap: 20px;
+               margin-bottom: 50px;
+           }
+
+           .nav-links {
+               flex-direction: column;
+               text-align: center;
+               gap: 15px;
+           }
+
+           .hero h1 {
+               font-size: 28px;
+           }
+
+           .hero p {
+               font-size: 16px;
+           }
+
+           .card {
+               flex-basis: 100%;
+           }
+
+           .cta-container {
+               flex-direction: column;
+               text-align: center;
+               gap: 20px;
+               padding: 30px;
+           }
+
+           .information h2 {
+               font-size: 28px;
+           }
+       }
    </style>
 </head>
 <body>
@@ -185,7 +271,7 @@
                <button class="sign-up">Book Now</button>
            </div>
            <div class="hero-image">
-              <img src="1.jpg" width="400px">
+              <img src="1.jpg" alt="Tour destination">
            </div>
        </div>
    </header>
@@ -195,25 +281,25 @@
        <div class="cards">
            <div class="card">
                <div class="card-image">
-                   <img src="2.jpeg" width="200px">
+                   <img src="2.jpeg" alt="Cultural tour">
                </div>
                <p>Cultural Tours in Historic Cities</p>
            </div>
            <div class="card">
                <div class="card-image">
-                   <img src="3.jpg" width="200px">
+                   <img src="3.jpg" alt="Adventure expedition">
                </div>
                <p>Adventure Expeditions in Nature</p>
            </div>
            <div class="card">
                <div class="card-image">
-                   <img src="1.jpg" width="200px">
+                   <img src="1.jpg" alt="Beach getaway">
                </div>
                <p>Luxury Beach Getaways</p>
            </div>
            <div class="card">
                <div class="card-image">
-                   <img src="2.jpeg" width="200px">
+                   <img src="2.jpeg" alt="Mountain hiking">
                </div>
                <p>Mountain Hiking Adventures</p>
            </div>
@@ -221,10 +307,10 @@
    </div>
 
    <div class="quote-section">
-    <blockquote class="quote">
-        PTours made our family vacation absolutely perfect. Their attention to detail and professional guides turned our trip into an unforgettable adventure. Highly recommended!
-    </blockquote>
-    <div class="quote-author">-Sarah Johnson, Family Tour 2023</div>
+       <blockquote class="quote">
+           PTours made our family vacation absolutely perfect. Their attention to detail and professional guides turned our trip into an unforgettable adventure. Highly recommended!
+       </blockquote>
+       <div class="quote-author">-Sarah Johnson, Family Tour 2023</div>
    </div>
 
    <div class="cta-section">
